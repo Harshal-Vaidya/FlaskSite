@@ -4,6 +4,10 @@
     "local_server": "True",
     "local_uri":"mysql+pymysql://root:@localhost/thoughtstrivial",
     "prod_uri": "mysql+pymysql://root:@localhost/thoughtstrivial",
-    "fb_url": "https://www.facebook.com"
+    "fb_url": "https://www.facebook.com",
+    "gmail-user":"mailid@gmail.com",
+    "gmail-password":"password",
+    "about_text": "Hi I am Harshal and I create great websites",
+    "no_of_posts": 3
   }
 }
