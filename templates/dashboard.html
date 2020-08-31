@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{ url_for('static', filename='img/home-bg.jpg') }})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Admin Panel </h1>
+            <span class="subheading">Blog By A Genius Being</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+       Welcome You are logged in
+    <hr>
+         <br>Basic Functions
+
+    <div>
+        <a class="btn btn-primary float-left" href="/edit/0">Add New Posts</a>
+        <a class="btn btn-primary float-right" href="/logout">Logout</a>
+        <hr>
+        <br><br>
+        <h1>Upload file here</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file1">
+            <button type="submit" class="btn btn-primary">Submit</button>
+<!---->
+        </form>
+    </div>
+
+    <br><br>
+          <hr>
+          <h2>Edit Post</h2>
+    <div>
+          <table class="table">
+    <thead>
+      <tr>
+        <th>SNo</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for post in posts %}
+    <tr>
+        <th>{{post.sno}}</th>
+        <th>{{post.title}}</th>
+        <th>{{post.date}}</th>
+        <th><a href="/edit/{{post.sno}}"> <button class="btn btn-primary">Edit</button> </a></th>
+        <th><a href="/delete/{{post.sno}}"><button class="btn btn-primary">Delete</button></a></th>
+      </tr>
+
+    {% endfor %}
+    </tbody>
+  </table>
+      </div>
+
+        <!-- Pager -->
+        <div class="clearfix">
+            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+            <a class="btn btn-primary float-left" href="#"> &larr; Newer Posts</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+{% endblock %}

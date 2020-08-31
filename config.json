@@ -8,6 +8,10 @@
     "gmail-user":"mailid@gmail.com",
     "gmail-password":"password",
     "about_text": "Hi I am Harshal and I create great websites",
-    "no_of_posts": 3
+    "no_of_posts": 2,
+    "blog_name": "Thoughts Trivial",
+    "admin_user":"admin name here",
+    "admin_password": "password here",
+    "upload_location": "C:\\Users\\Admin\\PycharmProjects\\FlaskSite\\static"
   }
 }
